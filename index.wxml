@@ -1,0 +1,38 @@
+<view class="all">
+
+  <view class="col"> 
+    <view wx:for="{{colLeft}}" class="item-container"> 
+      <view> 
+        <image id="left" src="{{serverUrl}}{{item.coverPath}}" class="img" bindtap='showVideoInfo' 
+          data-arrindex='{{index}}' mode="widthFix"></image>
+      </view> 
+      <view class="desc">
+        <view class="faceName">
+          <image class='myface' src="{{serverUrl}}{{item.faceImage}}"></image>
+          <text class="nickname">{{item.nickname}}</text>
+        </view>
+        <view class="mylikecount">{{item.likeCounts}} ♥</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="col"> 
+    <view wx:for="{{colRight}}" class="item-container"> 
+      <view class='back-img'> 
+        <image id="right" src="{{serverUrl}}{{item.coverPath}}" class="img" bindtap='showVideoInfo' 
+          data-arrindex='{{index}}' mode="widthFix"></image>
+      </view>
+      <view class="desc">
+        <view class="faceName">
+          <image class='myface' src="{{serverUrl}}{{item.faceImage}}"></image>
+          <text class="nickname">{{item.nickname}}</text>
+        </view>
+        <view class="mylikecount">{{item.likeCounts}} ♥</view>
+      </view>
+    </view>
+  </view>
+
+</view>   
+  
+
+
